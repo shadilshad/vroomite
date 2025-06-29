@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="WhatsApp Image 2025-06-29 at 22.01.02_ff946c0d.jpg">
+  <title>vroomite_</title>
+  <style>
+    :root {
+      --primary-color: #f9c000;
+      --dark-bg: #111;
+      --light-bg: #f9f9f9;
+      --accent-color: #00c6ff;
+      --text-glow: #ffffffaa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+      color: #222;
+      line-height: 1.6;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    header {
+      background: linear-gradient(to right, var(--dark-bg), #333);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(to right, #f9c000, #ffde59, #f9c000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { background-position: 0%; }
+      100% { background-position: 200%; }
+    }
+
+    .hero {
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: 2px solid var(--primary-color);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      animation: typing 4s steps(45, end) infinite, blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      0% { width: 0 }
+      90% { width: 35% }
+      100% { width: 0 }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--primary-color); }
+    }
+
+    .cta-button {
+      background: linear-gradient(to right, #f9c000, #ffde59);
+      color: #000;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .cta-button:hover {
+      background: #000;
+      color: var(--primary-color);
+      transform: scale(1.05);
+    }
+
+    .features, .steps {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features h3, .steps h3, .contact h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .features ul, .steps p {
+      font-size: 1.2rem;
+    }
+
+    .features li {
+      margin: 10px 0;
+      list-style: none;
+    }
+
+    .features li::before {
+      content: '🚀';
+      margin-right: 10px;
+      color: var(--accent-color);
+    }
+
+    .steps {
+      background: linear-gradient(to bottom, #fff, #ddd);
+    }
+
+    .contact {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      margin: 50px auto;
+      max-width: 600px;
+      padding: 40px 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .contact-form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background: #f9c000;
+      color: #000;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #000;
+      color: #f9c000;
+    }
+
+    footer {
+      background: linear-gradient(to right, #111, #222);
+      color: var(--text-glow);
+      padding: 25px;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: #25d366;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      animation: float 2s infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>vroomite</h1>
+  </header>
+
+<section class="hero" style="
+  position: relative;
+  background-image: url('WhatsApp Image 2025-06-29 at 22.01.02_ff946c0d.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+">
+  <!-- Overlay -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+    z-index: 1;
+  "></div>
+
+  <!-- Content -->
+  <div style="position: relative; z-index: 2;">
+    <h2 style="font-size: 2.5rem; color: #fff;">Let's talk about toys!</h2>
+    <p style="font-size: 1.2rem;">DM FOR ORDERS</p>
+    <p class="typewriter" style="color: #f9c000;">Shipping all India</p>
+    <br />
+    <button class="cta-button" onclick="window.location.href='https://wa.me/9633337430'">Order via WhatsApp</button>
+  </div>
+</section>
+ 
+  <section class="features">
+    <h3>Why Choose Our Shipping?</h3>
+    <ul>
+      <li>Safe handling of heavy and fragile parts</li>
+      <li>Nationwide delivery within 2–5 working days</li>
+      <li>Real-time shipment tracking and updates</li>
+      <li>Reliable courier partners for secured transit</li>
+      <li>Hassle-free returns and support for damaged items</li>
+    </ul>
+  </section>
+
+  <section class="steps">
+    <h3>How It Works</h3>
+    <p>1️⃣ Contact us on WhatsApp or Instagram</p>
+    <p>2️⃣ Share the product details or part you're looking for</p>
+    <p>3️⃣ Confirm your order and make payment</p>
+    <p>4️⃣ We securely pack and ship your order</p>
+    <p>5️⃣ Track your delivery and receive it at your doorstep</p>
+  </section>
+
+  <section class="contact">
+    <h3>Connect with Us</h3>
+    <div class="social-icons">
+      <a href="https://wa.me/919633337430" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/vroomite_/" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram"></a>
+      <a href="mailto:vroomite@gmail.com"><img src="https://img.icons8.com/fluency/48/000000/gmail.png" alt="Gmail"></a>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Details</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact: vroomite@gmail.com | WhatsApp: +91 9633337430</p>
+    <p>&copy; 2025 vroomite_.</p>
+  </footer>
+
+  <a href="https://wa.me/919633337430" class="whatsapp-float" target="_blank">
+    <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    const form = document.querySelector(".contact-form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        alert("Thank you! We'll get in touch soon. 🚀");
+        form.reset();
+      }).catch(() => {
+        alert("Oops! Something went wrong.");
+      });
+    });
+  </script>
+</body>
+</html>
